@@ -1,0 +1,40 @@
+/* v0.2: focused additions for the Line 5 hero, route board and top-layer achievement banner. */
+.brand small{font-size:9px;letter-spacing:.1px}
+.hero-side-photo{position:absolute;right:0;top:0;bottom:0;width:46%;margin:0;overflow:hidden;z-index:1;background:#9c6bd2}
+.hero-side-photo img{position:absolute;width:170%;max-width:none;height:100%;left:-65%;object-fit:cover;object-position:center 55%;filter:saturate(.75)}
+.hero-side-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#8a53cb 0%,#8850cbbc 15%,#7542aa10 65%),linear-gradient(0deg,#512477ae,transparent 60%)}
+.hero-side-photo figcaption{position:absolute;bottom:19px;right:13px;left:28px;color:#fff;font-size:8px;letter-spacing:.5px;z-index:2;text-align:right}
+.hero-route{z-index:3;font-weight:550;text-shadow:0 1px 5px #402260}
+.hero:before,.hero:after{display:none}
+.hero-text{max-width:78%;z-index:2}
+.hero-eyebrow .line-pill{font-size:10px}
+.line5-route-board{margin-top:-10px;padding:16px 19px;border:1px solid #e9dff4;background:#fbf8ff;border-radius:12px}
+.route-board-heading{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.route-board-heading strong{display:flex;align-items:center;gap:8px;color:#7851a4;font-size:11px;font-weight:650}
+.route-five{height:23px;width:23px;display:grid;place-items:center;color:#fff;background:#996cac;border-radius:50%;font-size:15px}
+.route-board-heading>small{font-size:9px;color:#a18bb5}
+.station-line{display:flex;justify-content:space-between;position:relative;margin:16px 4px 8px;gap:7px}
+.station-line:before{content:'';position:absolute;left:15px;right:15px;height:3px;background:#996cac;top:5px;border-radius:4px}
+.station{position:relative;display:flex;align-items:center;flex-direction:column;gap:6px;font-size:9px;color:#9680ab;min-width:33px}
+.station b{width:12px;height:12px;border:3px solid #996cac;border-radius:50%;background:#fbf8ff;z-index:1}
+.station.highlight{color:#8150b5;font-weight:700}
+.station.highlight b{background:#996cac;box-shadow:0 0 0 4px #eae0f2}
+.line5-route-board>p{font-size:8px;color:#ac9bbd;display:flex;justify-content:space-between;gap:10px;margin-top:13px}
+.line5-route-board>p a{display:flex;align-items:center;gap:3px;white-space:nowrap}
+.line5-route-board>p a:hover{color:#7642b8}
+.line5-route-board>p svg{width:9px;height:9px}
+#achievement-banner{position:fixed;inset:22px 22px auto auto;margin:0;width:340px;max-width:calc(100vw - 32px);padding:18px 19px 21px;gap:13px;align-items:center;border:1px solid #c5a4ed;border-radius:14px;background:linear-gradient(110deg,#fff,#f6edff);color:#5d3888;box-shadow:0 12px 45px #39204a40;overflow:hidden;pointer-events:none;z-index:1000;opacity:0;transform:translateY(-15px);transition:opacity .22s,transform .22s}
+#achievement-banner:popover-open{display:flex}
+#achievement-banner.visible{opacity:1;transform:translateY(0)}
+#achievement-banner.leaving{opacity:0;transform:translateY(-10px)}
+.achievement-emblem{display:grid;place-items:center;width:45px;height:45px;border-radius:13px;background:#8549c8;color:#fff;box-shadow:0 4px 12px #7943c52b;flex-shrink:0}
+.achievement-emblem svg{width:23px;height:23px}
+#achievement-banner small{display:block;font-size:9px;font-weight:650;letter-spacing:.5px;color:#a481c7;margin-bottom:3px}
+#achievement-banner strong{display:block;font-size:16px;line-height:1.5}
+#achievement-banner p{font-size:10px;margin-top:3px;color:#aa91ba}
+.achievement-timer{position:absolute;height:3px;bottom:0;left:0;background:#a779d0;width:100%;transform-origin:left;animation:achievement-countdown 3s linear forwards}
+@keyframes achievement-countdown{to{transform:scaleX(0)}}
+@media(max-width:1150px){.hero-text{max-width:90%}.hero-side-photo{width:44%}.hero-side-photo figcaption{font-size:7px;right:10px;left:8px}.line5-route-board{padding:15px}.route-board-heading>small{font-size:8px}}
+@media(max-width:950px){.hero-text{max-width:73%}.hero-side-photo{width:49%}}
+@media(max-width:700px){.hero{min-height:364px;padding:24px 22px 142px}.hero-text{max-width:100%}.hero-route{font-size:7px;right:14px;top:17px}.hero-side-photo{width:100%;height:140px;top:auto;bottom:0}.hero-side-photo img{height:100%;width:170%;left:-65%;object-position:center 52%;filter:saturate(.85)}.hero-side-photo:after{background:linear-gradient(0deg,#49226d99,transparent 70%),linear-gradient(180deg,#9563d0 0%,#9563d023 24%,transparent 55%)}.hero-side-photo figcaption{bottom:13px;right:15px;left:15px;font-size:8px}.hero .button{margin-top:16px}.line5-route-board{padding:15px 14px;margin-top:-7px}.route-board-heading strong{font-size:10px;gap:6px}.route-board-heading>small{font-size:8px}.route-five{height:21px;width:21px;font-size:13px}.line5-route-board>p{font-size:7px;flex-wrap:wrap;gap:5px;margin-top:12px}.station{font-size:9px}.study-layout .chapter-card{padding:17px 13px}.study-layout .chapter-card .button{margin-top:0}.study-layout .chapter-card{align-items:center}.study-layout .chapter-details p{font-size:9px}#achievement-banner{inset:12px 12px auto auto;max-width:calc(100vw - 24px);width:340px;padding:15px 16px 18px}#achievement-banner strong{font-size:15px}.achievement-emblem{height:40px;width:40px}.brand small{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.achievement-timer{animation:none}#achievement-banner{transition:none;transform:none}}
