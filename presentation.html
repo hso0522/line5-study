@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#7842c5"><meta name="description" content="신입기관사를 위한 운전취급규정 학습, 퀴즈, 오답 복습과 성장 배지">
+  <title>운전취급규정 발표자료 문제 · LINE 5</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/updates.css">
+  <link rel="stylesheet" href="css/badges.css">
+  <link rel="stylesheet" href="css/pwa.css">
+  <link rel="stylesheet" href="css/line5.css">
+  <link rel="stylesheet" href="css/presentation.css">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="images/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="LINE 5 학습실">
+  <script defer src="js/vendor/lucide.min.js"></script>
+  <script defer src="js/questions.js"></script>
+  <script defer src="js/questions-2016.js"></script>
+  <script defer src="js/questions-presentation.js"></script>
+  <script defer src="js/badges.js"></script>
+  <script defer src="js/presentation.js"></script>
+  <script defer src="js/app.js"></script>
+  <script defer src="js/pwa.js"></script>
+</head>
+<body data-start-view="presentation">
+  <aside class="sidebar" aria-label="주 메뉴">
+    <a href="#home" class="brand"><span class="brand-symbol">5</span><span>LINE 5<small>서울 지하철 5호선 · 학습실</small></span></a>
+    <div class="workspace-label">MY LEARNING SPACE</div>
+    <nav class="navigation">
+      <a href="#home" data-route="home"><i data-lucide="layout-dashboard"></i>학습 홈</a>
+      <a href="#study" data-route="study"><i data-lucide="book-open"></i>단원별 학습<span class="nav-tag">5</span></a>
+      <a href="#review" data-route="review"><i data-lucide="notebook-pen"></i>오답 노트<span id="wrong-count" class="nav-count">0</span></a>
+      <a href="#badges" data-route="badges"><i data-lucide="medal"></i>나의 배지</a>
+      <a href="#resources" data-route="resources"><i data-lucide="folder-open"></i>학습 자료실</a>
+    </nav>
+    <section class="sidebar-note"><span class="mini-line">5호선의 시작, 안전한 한 걸음</span><i data-lucide="train-front"></i><h3>좋은 기관사는<br>탄탄한 기본에서부터.</h3><p>매일 조금씩, 함께 성장해요.</p><span class="rail-line"><b></b><b></b><b></b><b></b></span></section>
+    <div class="sidebar-bottom"><button id="settings-button"><i data-lucide="settings-2"></i>학습 설정</button><small>서울 지하철 5호선 · 기관사 학습실</small></div>
+  </aside>
+  <div class="app-shell">
+    <header class="topbar"><div class="breadcrumb"><span class="line5-header-badge">5</span>5호선 학습 공간 <span>/</span> <strong id="current-title">학습 홈</strong></div><div class="topbar-right"><button class="install-app-button" id="install-app-button" aria-label="웹앱 설치 안내"><i data-lucide="download"></i><span>앱 설치</span></button><span class="header-divider"></span><span class="avatar">신</span><span class="profile-name">신입 기관사님<i data-lucide="chevron-down"></i></span></div></header>
+    <main id="main-content"></main>
+    <footer class="site-footer"><span><span class="footer-dot"></span>안전한 운전의 시작, LINE 5</span><span>비공식 학습용 플랫폼 · 실제 운전은 현행 규정에 따르세요.</span></footer>
+  </div>
+  <dialog id="quiz-dialog" aria-labelledby="quiz-title"><div id="quiz-content"></div></dialog>
+  <dialog id="settings-dialog" aria-labelledby="settings-title"><div class="dialog-heading"><h2 id="settings-title">학습 설정</h2><button class="icon-button" data-close="settings-dialog" aria-label="닫기"><i data-lucide="x"></i></button></div><p class="muted">학습 기록은 현재 브라우저에만 저장됩니다.</p><label class="field-label" for="daily-goal">하루 학습 목표</label><select id="daily-goal"><option value="5">5문제</option><option value="8">8문제</option></select><button id="save-settings" class="button primary full">설정 저장</button><div class="reset-section"><h3>학습 기록 초기화</h3><p class="muted">경험치, 진도, 배지 및 오답 기록이 모두 삭제됩니다.</p><button id="reset-progress" class="button danger">기록 초기화</button></div></dialog>
+  <dialog id="install-dialog" aria-labelledby="install-title"><div class="dialog-heading"><h2 id="install-title">홈 화면에 LINE 5 설치하기</h2><button class="icon-button" data-close="install-dialog" aria-label="설치 안내 닫기"><i data-lucide="x"></i></button></div><ol class="install-instructions"><li><strong>Android · Chrome / PC · Chrome·Edge</strong><br>브라우저 메뉴의 ‘앱 설치’ 또는 ‘홈 화면에 추가’를 선택하세요. 설치 가능 시 이 버튼에서 설치 창이 열립니다.</li><li><strong>iPhone · Safari</strong><br>공유 버튼 → ‘홈 화면에 추가’ → ‘추가’를 선택하세요.</li></ol><p class="install-notice">GitHub Pages의 HTTPS 주소에서 처음 온라인으로 접속한 뒤 설치하세요. 학습 기록은 현재 브라우저/기기에 저장되며 다른 주소로 배포하면 자동으로 이전되지 않습니다.</p></dialog>
+  <aside id="achievement-banner" popover="manual" role="status" aria-live="polite" aria-atomic="true"></aside>
+  <div id="toast" role="status" aria-live="polite"></div>
+<script src="https://www.genspark.ai/sandbox_inspect.js"></script></body>
+</html>
